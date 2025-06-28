@@ -19,7 +19,7 @@ def main():
         print(f"hello from python inside docker! ({i}) I am {os.getuid()}...")
         time.sleep(1)
         lines = 0
-        with open("data.txt", "r", encoding="utf-8") as stream:
+        with open("data.txt", encoding="utf-8") as stream:
             for _line in stream:
                 lines += 1
         print(f"the file has {lines} lines")

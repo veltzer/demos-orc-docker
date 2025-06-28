@@ -1,32 +1,22 @@
-""" python requirements for this project """
+""" python deps for this project """
 
-from typing import List
-
-
-config_requires: List[str] = []
-dev_requires: List[str] = []
-install_requires: List[str] = []
-build_requires: List[str] = [
+build_requires: list[str] = [
     "flask",
     "mysql-connector-python",
     "pyvardump",
     "requests",
-    "types-requests",
 
+    "pydmt",
     "pymakehelper",
-    "pypitools",
     "pycmdtools",
-
-    "black",
+    "pyclassifiers",
 
     "pylint",
     "pytest",
     "pytest-cov",
-    "flake8",
-    "pyflakes",
     "mypy",
-    "pydmt",
-    "pyclassifiers",
+
+    # types
+    "types-requests",
 ]
-test_requires: List[str] = []
-requires = config_requires + install_requires + build_requires + test_requires
+requires = build_requires

@@ -12,7 +12,7 @@ if os.path.isfile("data.txt"):
     print("data.txt exists, starting to write from endpoint..")
     sys.stdout.flush()
     # read how many lines are in
-    with open("data.txt", "r", encoding="utf-8") as stream:
+    with open("data.txt", encoding="utf-8") as stream:
         i = len(stream.readlines())
     print(f"starting from {i}...")
     sys.stdout.flush()
