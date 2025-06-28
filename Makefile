@@ -11,8 +11,6 @@ DO_SHELLCHECK:=1
 DO_SYNTAX:=1
 # do you want to lint python files using pylit?
 DO_PYLINT:=1
-# do you want to lint python files using flake8?
-DO_FLAKE8:=1
 # do you want to lint python files using mypy?
 DO_MYPY:=1
 # do you want to run mdl on md files?
@@ -44,7 +42,6 @@ ALL_SHELLCHECK:=$(addprefix out/, $(addsuffix .shellcheck, $(ALL_SH)))
 ALL_PY:=$(shell find . -type f -name "*.py" -and -not -path "./.venv/*" -and -not -path "./node_modules/*" -printf "%P\n")
 ALL_SYNTAX:=$(addprefix out/,$(addsuffix .syntax, $(basename $(ALL_PY))))
 ALL_PYLINT:=$(addprefix out/,$(addsuffix .pylint, $(basename $(ALL_PY))))
-ALL_FLAKE8:=$(addprefix out/,$(addsuffix .flake8, $(basename $(ALL_PY))))
 ALL_MYPY:=$(addprefix out/,$(addsuffix .mypy, $(basename $(ALL_PY))))
 
 MD_SRC:=$(shell find examples exercises compose -type f -and -name "*.md")
@@ -67,10 +64,6 @@ endif # DO_SYNTAX
 ifeq ($(DO_PYLINT),1)
 ALL+=$(ALL_PYLINT)
 endif # DO_PYLINT
-
-ifeq ($(DO_FLAKE8),1)
-ALL+=$(ALL_FLAKE8)
-endif # DO_FLAKE8
 
 ifeq ($(DO_MYPY),1)
 ALL+=$(ALL_MYPY)
@@ -159,10 +152,6 @@ $(ALL_SYNTAX): out/%.syntax: %.py
 $(ALL_PYLINT): out/%.pylint: %.py .pylintrc
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
-	$(Q)pymakehelper touch_mkdir $@
-$(ALL_FLAKE8): out/%.flake8: %.py
-	$(info doing [$@])
-	$(Q)python -m flake8 $<
 	$(Q)pymakehelper touch_mkdir $@
 $(ALL_MYPY): out/%.mypy: %.py
 	$(info doing [$@])
