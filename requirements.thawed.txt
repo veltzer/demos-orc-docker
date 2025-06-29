@@ -2,7 +2,6 @@
 flask
 mypy
 mysql-connector-python
-pyclassifiers
 pycmdtools
 pydmt
 pylint
