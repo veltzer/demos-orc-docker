@@ -9,14 +9,14 @@ $ docker pull nginx
 * Now run nginx while opening a port to work with it:
 
 ```bash
-$ docker run -d -p 8080:80 ngnix
+$ docker run -d -p 8080:80 nginnx
 ```
 
 * Now access nginx to see that it is running and accessible:
 
 ```bash
-$ curl localhost:8080
+$ curl "localhost:8080"
 ```
 
 * (If possible) access your nginx with your browser.
-Open your browser at http://[your_ip]:8080
+Open your browser at `http://[your_ip]:8080`
