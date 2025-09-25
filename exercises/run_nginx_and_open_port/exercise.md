@@ -9,7 +9,7 @@ $ docker pull nginx
 * Now run nginx while opening a port to work with it:
 
 ```bash
-$ docker run -d -p 8080:80 nginnx
+$ docker run -d -p 8080:80 nginx
 ```
 
 * Now access nginx to see that it is running and accessible:
