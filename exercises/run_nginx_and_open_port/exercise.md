@@ -20,3 +20,15 @@ $ curl "localhost:8080"
 
 * (If possible) access your nginx with your browser.
 Open your browser at `http://[your_ip]:8080`
+
+* Kill your container by fiding out the id of your container using
+
+```bash
+$ docker ps
+```
+
+And then:
+
+```bash
+$ docker kill [your_containers_id]
+```
