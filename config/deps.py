@@ -36,7 +36,7 @@ packages = [
     # the right package for docker compose
     "docker-compose-v2",
     # "docker-doc",
-    # "docker-buildx",
+    "docker-buildx",
     # "docker-clean",
     # "docker-registry",
     "golang-docker-credential-helpers",
