@@ -1,4 +1,5 @@
-FROM maven:3.8.7-openjdk-18 AS build
+# FROM maven:3.8.7-openjdk-18 AS build
+FROM maven:3.9.11-sapmachine-25 AS build
 # FROM maven:latest AS build
 WORKDIR /app
 # Notice the two stages to utilize the cache better assuming pom.xml
@@ -13,7 +14,7 @@ RUN mvn dependency:resolve-plugins
 COPY src /app/src
 RUN mvn package -DskipTests
 
-FROM openjdk:18-jdk-slim
+FROM openjdk:25-ea-slim
 WORKDIR /app
 COPY --from=build /app/target/app-1.0.jar /app/target/dependencies /app
 CMD ["java", "-cp", "./*", "com.company.HelloWorld"]
