@@ -1,7 +1,7 @@
 """ project definitions """
 
-name = "demos-docker"
-description_short = "Demos-docker shows you how to do things with docker"
+name = "demos-orc-docker"
+description_short = "demos-orc-docker shows you how to do things with docker"
 keywords = [
     "docker",
     "container",
