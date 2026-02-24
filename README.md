@@ -24,4 +24,4 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 Currently there are 67 examples in this repo.
 
-Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024, 2025
+Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
