@@ -4,9 +4,9 @@ Phase 1:
 
 * Install Docker with MySQL DB on it
 * Demonstrate that you can contact the database and perform operation on it
-    `CREATE DATABASE`
-    `CREATE TABLE`
-    `INSERT INTO`
+  `CREATE DATABASE`
+  `CREATE TABLE`
+  `INSERT INTO`
 
 Phase 2:
 

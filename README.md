@@ -10,11 +10,6 @@ website: https://veltzer.github.io/demos-orc-docker
 
 ![build](https://github.com/veltzer/demos-orc-docker/workflows/build/badge.svg)
 
-
-## Contact
-
-chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
-
 ## How to run
 
 * `docker.io` must be installed and running.
@@ -23,5 +18,9 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 ## Number of examples
 
 Currently there are 67 examples in this repo.
+
+## Contact
+
+chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
 Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
