@@ -11,10 +11,10 @@
 * create a java file called HelloWorld.java residing in a folder structure like so:
 Gradle build folder inside the docker
 └── src
-    └── main
-        └── java
-            └── hello
-                └── HelloWorld.java
+  └── main
+  └── java
+  └── hello
+  └── HelloWorld.java
 
 with the following content:
 

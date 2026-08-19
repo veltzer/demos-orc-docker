@@ -16,15 +16,15 @@ with:
 
 Adding yourself to the docker group:
 * Check if you are in the docker group using the command:
-    `$ groups`
+  `$ groups`
 * If you are in the docker group go to the next phase of the exercise
 * If you are not in the docker group then:
     * add yourself to the docker group using the command:
-        `$ sudo /usr/sbin/adduser [your_user_name] docker`
+      `$ sudo /usr/sbin/adduser [your_user_name] docker`
     * logout and re-login (in windows virtualization you may need to restart the VM guest)
     * after re-login or re-start run:
-        `$ groups`
-    and check that now you are in the "docker" group.
+      `$ groups`
+  and check that now you are in the "docker" group.
 
 Lets run some containers...
 Make sure you don't have anything listening on port 80:

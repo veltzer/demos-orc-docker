@@ -6,15 +6,15 @@
 
 ## post mortem methods
 * show that your container is listed in the deceased list:
-    `$ docker container ps -a`
-    or
-    `$ docker ps -a`
+  `$ docker container ps -a`
+  or
+  `$ docker ps -a`
 * show how to extract the file written by the python app from the
-    corpse of the deceased container.
-    hint: use `docker cp`
+  corpse of the deceased container.
+  hint: use `docker cp`
 * extract all the files from your container using the `docker export`
-    command.
+  command.
 
 ## Advanced
 * create a new image from your deceased container using the `docker commit`
-    command and explore it with `docker run` and `bash`.
+  command and explore it with `docker run` and `bash`.

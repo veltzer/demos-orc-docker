@@ -1,0 +1,15 @@
+# Repo-specific overlay. Deep-merged over the canonical rsconstruct.toml.
+
+# README.md renders from tera.templates/README.md.tera, loading config/*.lua
+# with load_lua (the pyanyzip pattern). The pydmt mako templates are gone.
+[processor.tera]
+src_dirs = ["tera.templates"]
+
+# Every exercise deliberately carries the same file name (solution.py /
+# app.py) so the material reads uniformly. Batched mypy maps same-named files
+# to one module and fails with "Duplicate module" whenever they share an
+# invocation. batch = false checks every file in its own invocation: same
+# checks, no shared namespace. The exercise directories cannot become
+# packages (names like 02_hello are not valid identifiers).
+[processor.mypy]
+batch = false

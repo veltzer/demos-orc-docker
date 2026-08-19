@@ -9,12 +9,12 @@
     * python:3-slim: a lighter version version of python
     * python:3-alpine: the lightest version of python (around 50 megs)
 * in the docker file the first line selects the image that you build on:
-    `FROM [image_name]`
+  `FROM [image_name]`
 * Remember to put your application inside the image using the docker "COPY" command.
 * Remember to change what the docker image runs using the "CMD" command.
 * Remember to build your image using:
-    `$ docker build --tag "[your_image_name]:[your_image_version]" .`
-    "latest" is the default version if you do not supply any
+  `$ docker build --tag "[your_image_name]:[your_image_version]" .`
+  "latest" is the default version if you do not supply any
 * Run your image using:
-    `$ docker run -it "[your_image_name]:[your_image_version]"`
-    "latest" is the default version if you do not supply any
+  `$ docker run -it "[your_image_name]:[your_image_version]"`
+  "latest" is the default version if you do not supply any
