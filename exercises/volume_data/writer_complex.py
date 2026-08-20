@@ -4,9 +4,9 @@
 A writer that continues to write where it left off
 """
 
+import os.path
 import sys
 import time
-import os.path
 
 
 def main():

@@ -4,9 +4,9 @@
 Simple python logging applcation
 """
 
-import time
-import sys
 import os
+import sys
+import time
 
 if len(sys.argv) > 1:
     name = sys.argv[1]

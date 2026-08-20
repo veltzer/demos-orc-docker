@@ -7,7 +7,6 @@ Web server
 
 import flask
 
-
 app = flask.Flask("app")
 
 

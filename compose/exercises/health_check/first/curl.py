@@ -4,8 +4,9 @@
 Curl like tool in python
 """
 
-import sys
 import argparse
+import sys
+
 import requests
 
 

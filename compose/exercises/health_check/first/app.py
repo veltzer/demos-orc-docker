@@ -4,10 +4,10 @@
 Super simple web server
 """
 
-import time
 import logging
-from flask import Flask
+import time
 
+from flask import Flask
 
 log = logging.getLogger("werkzeug")
 log.setLevel(logging.INFO)

@@ -10,8 +10,8 @@ Two ways are shown here:
 any of them would work on its own.
 """
 
-import time
 import sys
+import time
 
 print(f"line_buffering is {sys.stdout.line_buffering}...")
 # sys.stdout.reconfigure(line_buffering=True)

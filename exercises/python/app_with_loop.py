@@ -4,8 +4,8 @@
 A simple infinite application that writes to stdout
 """
 
-import time
 import sys
+import time
 
 i = 0
 while True:

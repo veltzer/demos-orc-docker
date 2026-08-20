@@ -7,7 +7,6 @@ Simple python script that uses a module
 
 import pyvardump
 
-
 d = {
     "Mark": "Veltzer",
     "Doron": "Veltzer",

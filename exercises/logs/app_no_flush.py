@@ -4,8 +4,8 @@
 This is an example of an app printing to both stdout and stderr
 """
 
-import time
 import sys
+import time
 
 i = 0
 while True:

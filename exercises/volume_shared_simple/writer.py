@@ -4,8 +4,8 @@
 Just a simple app that writes to log
 """
 
-import time
 import sys
+import time
 
 
 def main():

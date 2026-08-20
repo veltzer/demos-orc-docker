@@ -7,7 +7,6 @@ This is the solution to the third phase of the exercise
 import flask
 import mysql.connector
 
-
 app = flask.Flask(__name__)
 
 

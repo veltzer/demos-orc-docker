@@ -4,8 +4,8 @@
 Application which grows in memory requirements all the time
 """
 
-import time
 import random
+import time
 
 big_array = []
 while True:

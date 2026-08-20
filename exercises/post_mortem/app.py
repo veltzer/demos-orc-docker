@@ -4,9 +4,9 @@
 Simple app that knows how to continue from where it left off
 """
 
-import time
-import sys
 import os.path
+import sys
+import time
 
 if os.path.isfile("data.txt"):
     print("data.txt exists, starting to write from endpoint..")

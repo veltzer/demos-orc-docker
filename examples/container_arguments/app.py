@@ -4,8 +4,8 @@
 Example of applicatino that prints the arguments given to it
 """
 
-import sys
 import os
+import sys
 
 print(f"the arguments I got are {sys.argv}...")
 if "A" in os.environ:

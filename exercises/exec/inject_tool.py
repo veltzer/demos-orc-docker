@@ -10,9 +10,9 @@ get ideas from:
     can-i-statically-link-a-dynamically-linked-executable
 """
 
-import sys
-import subprocess
 import os
+import subprocess
+import sys
 
 
 def main():
