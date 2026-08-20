@@ -4,10 +4,10 @@
 Writer app that has continue capability
 """
 
-import time
-import sys
 import os
 import os.path
+import sys
+import time
 
 
 def main():

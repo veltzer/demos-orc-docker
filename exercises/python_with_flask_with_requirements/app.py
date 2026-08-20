@@ -6,7 +6,6 @@ Simple flask based web server in python
 
 from flask import Flask
 
-
 app = Flask("app")
 
 

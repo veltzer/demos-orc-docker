@@ -5,6 +5,7 @@ Simple web app showing an html with a link
 """
 
 import sys
+
 from flask import Flask
 
 PORT = int(sys.argv[1])

@@ -4,8 +4,8 @@
 This is an example of an application which logs to stdout and crashs
 """
 
-import time
 import os
+import time
 
 i = 0
 while True:

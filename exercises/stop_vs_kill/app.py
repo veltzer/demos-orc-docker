@@ -4,9 +4,9 @@
 This app logs and catching the sigterm signal
 """
 
-import time
-import sys
 import signal
+import sys
+import time
 
 
 def cleanup(_self, *_args):

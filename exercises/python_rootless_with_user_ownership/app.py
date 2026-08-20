@@ -4,10 +4,10 @@
 Logging application which knows how to continue from where it left off
 """
 
-import time
-import sys
 import os
 import os.path
+import sys
+import time
 
 
 def main():

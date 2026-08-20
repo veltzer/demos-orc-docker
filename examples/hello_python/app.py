@@ -4,8 +4,8 @@
 Simple python logging applcation
 """
 
-import time
 import sys
+import time
 
 i = 0
 while True:

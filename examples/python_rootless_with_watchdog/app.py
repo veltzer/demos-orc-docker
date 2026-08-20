@@ -4,10 +4,10 @@
 An application which logs and crashes once in a while
 """
 
-import time
-import sys
 import os
 import random
+import sys
+import time
 
 
 def main():

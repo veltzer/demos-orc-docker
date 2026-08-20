@@ -4,8 +4,9 @@
 logging app that can receive sleep time and interval
 """
 
-import time
 import os.path
+import time
+
 # import random
 # import sys
 

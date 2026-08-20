@@ -6,7 +6,6 @@ web server that knows only to add two numbers
 
 import flask
 
-
 app = flask.Flask("app_b")
 
 

@@ -4,8 +4,8 @@
 Simple logging application
 """
 
-import time
 import sys
+import time
 
 PREFIX = sys.argv[1]
 FILENAME = sys.argv[2]

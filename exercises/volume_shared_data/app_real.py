@@ -4,10 +4,10 @@
 This is the solution to the volumes exercise
 """
 
-import time
-import sys
-import os.path
 import os
+import os.path
+import sys
+import time
 
 
 def main():

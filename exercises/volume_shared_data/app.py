@@ -4,9 +4,9 @@
 This is the solution to the volumes exercise
 """
 
-import time
-import sys
 import os
+import sys
+import time
 
 
 def main():
