@@ -1,15 +1,22 @@
-## demos-orc-docker
-
-version: 0.0.1
+# *demos-orc-docker* project by Mark Veltzer
 
 description: demos-orc-docker shows you how to do things with docker
 
-website: https://veltzer.github.io/demos-orc-docker
+project website: https://veltzer.github.io/demos-orc-docker
 
-## Build
+author: Mark Veltzer
+
+version: 0.0.1
+
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+## github
+
+![License](https://img.shields.io/github/license/veltzer/demos-orc-docker)
+
+## build
 
 ![build](https://github.com/veltzer/demos-orc-docker/workflows/build/badge.svg)
-
 ## How to run
 
 * `docker.io` must be installed and running.
@@ -19,8 +26,11 @@ website: https://veltzer.github.io/demos-orc-docker
 
 Currently there are 67 examples in this repo.
 
-## Contact
+## contact me
 
-chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
+[mailto](mailto:mark.veltzer@gmail.com)
+![gitter](https://img.shields.io/gitter/room/veltzer/mark.veltzer)
+![discord](https://img.shields.io/discord/719336281624281119)
+![discord](https://img.shields.io/discord/719336282194444302)
 
 Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
