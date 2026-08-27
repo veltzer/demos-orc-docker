@@ -55,9 +55,6 @@ batch = false
 # because the contention cost more than the concurrency won.
 max_jobs = 1
 
-[processor.requirements]
-src_dirs = ["scripts", "config"]
-
 # ─── shell ───────────────────────────────────────────────────────────────────
 
 [processor.shellcheck]
@@ -73,14 +70,3 @@ src_dirs = ["config"]
 
 [processor.taplo]
 src_dirs = ["."]
-
-# Runtime deps so CI installs what the code imports (pylint/mypy resolve
-# them) -- the demos-cloud-aws pattern.
-[dependencies]
-pip = [
-    "flask",
-    "mysql-connector-python",
-    "requests",
-    "pyvardump",
-    "types-requests",
-]
