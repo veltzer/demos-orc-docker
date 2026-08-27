@@ -5,7 +5,7 @@
 [project]
 name = "demos-orc-docker"
 version = "0.0.0"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "flask",
     "mysql-connector-python",
