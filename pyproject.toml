@@ -1,6 +1,4 @@
-# Generated to let `uv sync` install this repo's Python dependencies.
-# The authoritative dependency list is [dependencies].pip in
-# rsconstruct.toml; keep the two in sync when editing.
+# Lets `uv sync` install this repo's Python dependencies.
 
 [project]
 name = "demos-orc-docker"
@@ -11,7 +9,6 @@ dependencies = [
     "mysql-connector-python",
     "requests",
     "pyvardump",
-    "types-requests",
 ]
 
 [dependency-groups]
@@ -20,6 +17,7 @@ dev = [
     "pylint",
     "pytest",
     "ruff",
+    "types-requests",
 ]
 
 [tool.uv]
