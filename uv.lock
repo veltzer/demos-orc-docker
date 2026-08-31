@@ -218,7 +218,6 @@ dependencies = [
     { name = "mysql-connector-python" },
     { name = "pyvardump" },
     { name = "requests" },
-    { name = "types-requests" },
 ]
 
 [package.dev-dependencies]
@@ -227,6 +226,7 @@ dev = [
     { name = "pylint" },
     { name = "pytest" },
     { name = "ruff" },
+    { name = "types-requests" },
 ]
 
 [package.metadata]
@@ -235,7 +235,6 @@ requires-dist = [
     { name = "mysql-connector-python" },
     { name = "pyvardump" },
     { name = "requests" },
-    { name = "types-requests" },
 ]
 
 [package.metadata.requires-dev]
@@ -244,6 +243,7 @@ dev = [
     { name = "pylint" },
     { name = "pytest" },
     { name = "ruff" },
+    { name = "types-requests" },
 ]
 
 [[package]]
