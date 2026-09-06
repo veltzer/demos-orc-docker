@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins:2.479
 # FROM jenkins/jenkins:lts
 
 # Documentation can be found here: https://github.com/jenkinsci/docker/blob/master/README.md

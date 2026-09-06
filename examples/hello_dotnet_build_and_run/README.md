@@ -13,7 +13,7 @@ cd test
 dotnet run
 ```
 
-This will make the website available at [link](http://localhost:8080/).
+This will make the website available at [http://localhost:8080/](http://localhost:8080/).
 
 ## Deployment
 

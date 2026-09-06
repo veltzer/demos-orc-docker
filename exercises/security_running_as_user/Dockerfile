@@ -1,4 +1,4 @@
-FROM bash
+FROM bash:5.2
 # This is the simple example
 # CMD ["/usr/bin/id"]
 # This is the complex example

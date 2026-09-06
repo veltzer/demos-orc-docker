@@ -1,9 +1,14 @@
 services:
+  # the mapping (":") syntax
   my_service:
     environment:
       more1: ${PATH}
       more2: "${PATH}"
       more3: "${USER}:${PATH}"
+    image: hello
+  # the list ("=") syntax; a service may only have ONE environment block, so
+  # the two syntaxes are shown on two services rather than one
+  my_service_list_syntax:
     environment:
       - more1=${PATH}
       - more2="${PATH}"

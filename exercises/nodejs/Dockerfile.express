@@ -1,4 +1,4 @@
-FROM node
+FROM node:22
 WORKDIR /app
 COPY hello.js /app
 COPY package.json /app

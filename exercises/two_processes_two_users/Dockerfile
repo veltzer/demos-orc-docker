@@ -1,6 +1,5 @@
-FROM ubuntu
-RUN apt-get update -y
-RUN apt-get install -y adduser
+FROM ubuntu:24.04
+RUN apt-get update -y && apt-get install --no-install-recommends -y adduser && rm -rf /var/lib/apt/lists/*
 RUN adduser app1
 RUN adduser app2
 COPY app1.bash /home/app1

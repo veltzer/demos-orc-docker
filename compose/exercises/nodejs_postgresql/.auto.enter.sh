@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 site="postgres"
 env_db_user="postgres"
 env_db_password=$(pass show "passwords/${site}/${env_db_user}")

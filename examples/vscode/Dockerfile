@@ -1,6 +1,9 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y \
+# the RUN below pipes curl into gpg; fail the build if any stage of a pipe fails
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     gpg \
     libasound2 \
@@ -15,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 RUN curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o /usr/share/keyrings/ms.gpg \
     && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ms.gpg] https://packages.microsoft.com/repos/code stable main" \
     > /etc/apt/sources.list.d/vscode.list \
-    && apt-get update && apt-get install -y code \
+    && apt-get update && apt-get install -y --no-install-recommends code \
     && rm -rf /var/lib/apt/lists/*
 
 USER 1000

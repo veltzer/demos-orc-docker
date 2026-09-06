@@ -1,4 +1,4 @@
-FROM bash
+FROM bash:5.2
 COPY *.bash /
 # COPY app1.bash /
 # COPY app2.bash /

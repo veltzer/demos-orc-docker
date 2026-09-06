@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 rm -rf data || true
 mkdir data
 # shellcheck disable=SC2034

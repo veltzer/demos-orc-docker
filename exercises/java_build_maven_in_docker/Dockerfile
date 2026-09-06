@@ -16,5 +16,5 @@ RUN mvn package -DskipTests
 
 FROM openjdk:25-ea-slim
 WORKDIR /app
-COPY --from=build /app/target/app-1.0.jar /app/target/dependencies /app
+COPY --from=build /app/target/app-1.0.jar /app/target/dependencies /app/
 CMD ["java", "-cp", "./*", "com.company.HelloWorld"]

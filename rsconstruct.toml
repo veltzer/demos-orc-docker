@@ -25,7 +25,8 @@ src_dirs = ["tera.templates"]
 # ─── markdown ────────────────────────────────────────────────────────────────
 
 [processor.rumdl]
-src_dirs = ["exercises", "notes"]
+src_dirs = ["exercises", "notes", "compose", "examples"]
+src_files = ["README.md"]
 
 [processor.zspell]
 src_dirs = ["exercises", "notes"]
@@ -54,9 +55,12 @@ max_jobs = 1
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
+# --external-sources lets shellcheck follow the tracked .env files that the
+# compose exercises source, so their variables are seen as assigned.
 [processor.shellcheck]
-src_dirs = ["scripts", "exercises", "config"]
-args = ["--severity=error", "--shell=bash"]
+src_dirs = ["scripts", "exercises", "config", "compose", "examples", "fun"]
+src_files = [".auto.enter.sh", ".auto.exit.sh"]
+args = ["--external-sources"]
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
 
@@ -71,3 +75,55 @@ src_dirs = ["."]
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
 src_dirs = [".github/workflows"]
+
+# ─── yaml ────────────────────────────────────────────────────────────────────
+
+[processor.yamllint]
+src_dirs = ["compose", "exercises"]
+
+# ─── docker ──────────────────────────────────────────────────────────────────
+
+[processor.hadolint]
+src_dirs = ["compose", "examples", "exercises"]
+
+# ─── json ────────────────────────────────────────────────────────────────────
+
+[processor.ijsonlint]
+src_dirs = ["compose/exercises/nodejs_postgresql/app", "exercises/nodejs"]
+
+# ─── xml / svg ───────────────────────────────────────────────────────────────
+
+[processor.xmllint]
+src_dirs = ["exercises/java_build_maven_in_docker"]
+
+# ─── c / c++ ─────────────────────────────────────────────────────────────────
+
+[processor.cppcheck]
+src_dirs = ["examples", "exercises"]
+args = [
+	"--error-exitcode=1",
+	"--enable=warning,style,performance,portability",
+	"--inline-suppr",
+]
+
+# ─── java ────────────────────────────────────────────────────────────────────
+
+[processor.checkstyle]
+src_dirs = ["exercises"]
+args = ["-c", "checkstyle.xml"]
+
+# ─── html ────────────────────────────────────────────────────────────────────
+
+[processor.htmlhint]
+src_dirs = ["compose/exercises/cors"]
+
+# ─── css ─────────────────────────────────────────────────────────────────────
+
+[processor.stylelint]
+src_dirs = ["examples/hello_dotnet_build_and_run/test/Styles"]
+
+# ─── javascript ──────────────────────────────────────────────────────────────
+
+[processor.eslint]
+src_dirs = ["compose/exercises", "examples/hello_dotnet_build_and_run/test/Scripts", "exercises/nodejs"]
+args = ["-c", ".eslint.config.js"]

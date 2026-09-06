@@ -13,7 +13,7 @@ int main(int argc, char** argv, char** envp) {
 	size_t size=1024*1024*1024; // 1 GIG
 	while(1) {
 		printf("Allocating...\n");
-		void* p=mmap(
+		const void* p=mmap(
 			NULL,
 			size,
 			PROT_EXEC|PROT_READ|PROT_WRITE,

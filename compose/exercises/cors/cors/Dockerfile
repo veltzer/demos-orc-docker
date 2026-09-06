@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.27
 
 # Copy your custom Nginx configuration
 # COPY nginx.conf /etc/nginx/nginx.conf

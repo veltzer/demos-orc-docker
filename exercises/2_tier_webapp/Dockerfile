@@ -1,7 +1,7 @@
 FROM python:3-alpine
 COPY requirements.txt /
 ENV PIP_ROOT_USER_ACTION=ignore
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 COPY phase3_alone.py /phase3.py
 CMD ["python3", "/phase3.py"]

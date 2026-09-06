@@ -24,4 +24,4 @@ docker compose logs
 ```
 
 ## References
-* [link](https://docs.docker.com/reference/dockerfile/#healthcheck)
+* [the HEALTHCHECK reference](https://docs.docker.com/reference/dockerfile/#healthcheck)

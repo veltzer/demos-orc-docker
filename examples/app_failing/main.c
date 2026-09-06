@@ -9,6 +9,7 @@ int main(int argc, char** argv, char** envp) {
 		sleep(1);
 		if(counter==10) {
 			printf("help, I'm dying...\n");
+			// cppcheck-suppress nullPointer ; crashing on purpose is what this demo shows
 			*(char*)0=0;
 		}
 		counter++;
