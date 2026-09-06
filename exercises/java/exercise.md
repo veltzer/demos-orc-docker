@@ -11,9 +11,9 @@
 * Compile your `HelloWorld.java` into `HelloWorld.class`
   using a java compiler
 
-    `$ javac HelloWorld.java`
+  `$ javac HelloWorld.java`
 
-    a `HelloWorld.class` file will be created.
+  a `HelloWorld.class` file will be created.
 
 * Run your app just to see that it is OK.
   run it using:
