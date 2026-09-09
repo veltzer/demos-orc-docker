@@ -31,8 +31,6 @@ Currently there are 67 examples in this repo.
 
 ## contact me
 
-[mailto](mailto:mark.veltzer@gmail.com)
-![discord](https://img.shields.io/discord/719336281624281119)
-![discord](https://img.shields.io/discord/719336282194444302)
+[mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
