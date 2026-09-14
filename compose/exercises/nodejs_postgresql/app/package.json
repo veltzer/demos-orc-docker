@@ -4,5 +4,9 @@
     "express": "latest",
     "pg": "latest",
     "sequelize": "latest"
+  },
+  "//overrides": "Temporary pin for Dependabot: drop the uuid override once sequelize depends on uuid >=11.1.1 (sequelize 6 asks for ^8).",
+  "overrides": {
+    "uuid": "^11.1.1"
   }
 }
