@@ -40,8 +40,6 @@ src_dirs = ["exercises", "notes"]
 [processor.ruff]
 src_dirs = ["scripts", "config", "exercises"]
 
-[processor.pylint]
-src_dirs = ["scripts", "config", "exercises"]
 
 [processor.mypy]
 src_dirs = ["scripts", "config", "exercises"]
