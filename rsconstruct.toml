@@ -116,16 +116,19 @@ args = ["-c", "checkstyle.xml"]
 
 # ─── html ────────────────────────────────────────────────────────────────────
 
-[processor.htmlhint]
+[processor.tidy]
 src_dirs = ["compose/exercises/cors"]
 
 # ─── css ─────────────────────────────────────────────────────────────────────
 
-[processor.stylelint]
+# Only .css is passed: biome.jsonc turns biome's JavaScript and JSON linters
+# off, oxlint covers JavaScript and ijsonlint covers JSON.
+[processor.biome]
 src_dirs = ["examples/hello_dotnet_build_and_run/test/Styles"]
+src_extensions = [".css"]
 
 # ─── javascript ──────────────────────────────────────────────────────────────
 
-[processor.eslint]
+[processor.oxlint]
 src_dirs = ["compose/exercises", "examples/hello_dotnet_build_and_run/test/Scripts", "exercises/nodejs"]
-args = ["-c", ".eslint.config.js"]
+args = ["-c", ".oxlintrc.json"]

@@ -1,0 +1,47 @@
+{
+	// Biome config for linting CSS, replacing the former .stylelintrc.json with
+	// the same rule set spelled out. Only the CSS linter is on: JavaScript is
+	// linted by oxlint (.oxlintrc.json) and JSON by rsconstruct's ijsonlint.
+	//
+	// Three stylelint rules have no biome rule because biome's CSS parser
+	// rejects the construct outright: color-no-invalid-hex,
+	// no-invalid-double-slash-comments and string-no-newline. One is lost:
+	// function-calc-no-unspaced-operator, which biome does not check.
+	//
+	// no-empty-source is deliberately not carried over as noEmptySource: the
+	// stylelint rule counts a comment as content, biome's does not, and a
+	// stylesheet holding only a "(none yet)" comment is a legitimate exercise
+	// stub, not a mistake.
+	"javascript": { "linter": { "enabled": false } },
+	"json": { "linter": { "enabled": false } },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false,
+			"correctness": {
+				"noInvalidGridAreas": "error",
+				"noInvalidPositionAtImportRule": "error",
+				"noUnknownMediaFeatureName": "error",
+				"noUnknownProperty": "error",
+				"noUnknownPseudoClass": "error",
+				"noUnknownPseudoElement": "error",
+				"noUnknownTypeSelector": "error",
+				"noUnknownUnit": "error"
+			},
+			"suspicious": {
+				"noDuplicateAtImportRules": "error",
+				"noDuplicateFontNames": "error",
+				"noDuplicateProperties": "error",
+				"noEmptyBlock": "error",
+				"noImportantInKeyframe": "error",
+				"noIrregularWhitespace": "error",
+				"noShorthandPropertyOverrides": "error"
+			},
+			"nursery": {
+				// stylelint's no-duplicate-selectors; still a nursery rule in
+				// biome, enabled explicitly because nursery is off by default
+				"noDuplicateSelectors": "error"
+			}
+		}
+	}
+}
