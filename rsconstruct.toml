@@ -18,7 +18,7 @@ reject_dot_src_dirs = true
 # listed here must exist: rsconstruct rejects a missing one at config load.
 # Repos still on config/*.py keep a dep_inputs override in their local
 # overlay until converted.
-[processor.tera]
+[processor.generator.tera]
 dep_auto = [
 	"config/project.lua",
 	"config/personal.lua",
@@ -28,20 +28,20 @@ src_dirs = ["tera.templates"]
 
 # ─── markdown ────────────────────────────────────────────────────────────────
 
-[processor.rumdl]
+[processor.checker.rumdl]
 src_dirs = ["exercises", "notes", "compose", "examples"]
 src_files = ["README.md"]
 
-[processor.zspell]
+[processor.checker.zspell]
 src_dirs = ["exercises", "notes"]
 
 # ─── python ──────────────────────────────────────────────────────────────────
 
-[processor.ruff]
+[processor.checker.ruff]
 src_dirs = ["scripts", "config", "exercises"]
 
 
-[processor.mypy]
+[processor.checker.mypy]
 src_dirs = ["scripts", "config", "exercises"]
 batch = false
 # mypy 2.3 keeps its incremental cache in SQLite. batch = false means one mypy
@@ -59,48 +59,48 @@ max_jobs = 1
 
 # --external-sources lets shellcheck follow the tracked .env files that the
 # compose exercises source, so their variables are seen as assigned.
-[processor.shellcheck]
+[processor.checker.shellcheck]
 src_dirs = ["scripts", "exercises", "config", "compose", "examples", "fun"]
 src_files = [".auto.enter.sh", ".auto.exit.sh"]
 args = ["--external-sources"]
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
 
-[processor.luacheck]
+[processor.checker.luacheck]
 src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
-[processor.taplo]
+[processor.checker.taplo]
 src_files = [".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
 
 # lint the GitHub Actions workflow files with actionlint
-[processor.actionlint]
+[processor.checker.actionlint]
 src_dirs = [".github/workflows"]
 
 # ─── yaml ────────────────────────────────────────────────────────────────────
 
-[processor.yamllint]
+[processor.checker.yamllint]
 src_dirs = ["compose", "exercises"]
 
 # ─── docker ──────────────────────────────────────────────────────────────────
 
-[processor.hadolint]
+[processor.checker.hadolint]
 src_dirs = ["compose", "examples", "exercises"]
 
 # ─── json ────────────────────────────────────────────────────────────────────
 
-[processor.ijsonlint]
+[processor.checker.ijsonlint]
 src_dirs = ["compose/exercises/nodejs_postgresql/app", "exercises/nodejs"]
 
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
-[processor.xmllint]
+[processor.checker.xmllint]
 src_dirs = ["exercises/java_build_maven_in_docker"]
 
 # ─── c / c++ ─────────────────────────────────────────────────────────────────
 
-[processor.cppcheck]
+[processor.checker.cppcheck]
 src_dirs = ["examples", "exercises"]
 args = [
 	"--error-exitcode=1",
@@ -110,25 +110,25 @@ args = [
 
 # ─── java ────────────────────────────────────────────────────────────────────
 
-[processor.checkstyle]
+[processor.checker.checkstyle]
 src_dirs = ["exercises"]
 args = ["-c", "checkstyle.xml"]
 
 # ─── html ────────────────────────────────────────────────────────────────────
 
-[processor.tidy]
+[processor.checker.tidy]
 src_dirs = ["compose/exercises/cors"]
 
 # ─── css ─────────────────────────────────────────────────────────────────────
 
 # Only .css is passed: biome.jsonc turns biome's JavaScript and JSON linters
 # off, oxlint covers JavaScript and ijsonlint covers JSON.
-[processor.biome]
+[processor.checker.biome]
 src_dirs = ["examples/hello_dotnet_build_and_run/test/Styles"]
 src_extensions = [".css"]
 
 # ─── javascript ──────────────────────────────────────────────────────────────
 
-[processor.oxlint]
+[processor.checker.oxlint]
 src_dirs = ["compose/exercises", "examples/hello_dotnet_build_and_run/test/Scripts", "exercises/nodejs"]
 args = ["-c", ".oxlintrc.json"]
