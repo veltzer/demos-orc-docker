@@ -95,7 +95,7 @@ src_dirs = ["compose/exercises/nodejs_postgresql/app", "exercises/nodejs"]
 
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
-[processor.checker.xmllint]
+[processor.checker.ixmllint]
 src_dirs = ["exercises/java_build_maven_in_docker"]
 
 # ─── c / c++ ─────────────────────────────────────────────────────────────────
