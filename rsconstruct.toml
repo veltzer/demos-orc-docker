@@ -41,19 +41,8 @@ src_dirs = ["exercises", "notes"]
 src_dirs = ["scripts", "config", "exercises"]
 
 
-[processor.checker.mypy]
+[processor.checker.pyrefly]
 src_dirs = ["scripts", "config", "exercises"]
-batch = false
-# mypy 2.3 keeps its incremental cache in SQLite. batch = false means one mypy
-# process per file, and rsconstruct runs those in parallel -- they all open the
-# same .mypy_cache database and race, so a writer hits
-# "sqlite3.OperationalError: database is locked" and mypy dies with an
-# INTERNAL ERROR. It reproduced 8/8 on a cold cache and explains why CI only
-# failed on the runs that started from a cold/partial cache.
-# max_jobs = 1 serializes the mypy invocations. Same files, same checks, and
-# it is actually faster than the racing parallel version (12s vs 16s here),
-# because the contention cost more than the concurrency won.
-max_jobs = 1
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
