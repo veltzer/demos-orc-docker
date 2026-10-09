@@ -116,7 +116,7 @@ args = ["-c", "checkstyle.xml"]
 
 # ─── html ────────────────────────────────────────────────────────────────────
 
-[processor.checker.tidy]
+[processor.checker.itidy]
 src_dirs = ["compose/exercises/cors"]
 
 # ─── css ─────────────────────────────────────────────────────────────────────
