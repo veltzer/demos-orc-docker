@@ -85,7 +85,7 @@ src_dirs = ["compose", "exercises"]
 
 # ─── docker ──────────────────────────────────────────────────────────────────
 
-[processor.checker.hadolint]
+[processor.checker.idockerfile]
 src_dirs = ["compose", "examples", "exercises"]
 
 # ─── json ────────────────────────────────────────────────────────────────────
