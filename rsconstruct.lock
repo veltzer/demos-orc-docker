@@ -1,0 +1,28 @@
+# rsconstruct.lock: the exact tool versions this project builds with.
+# Written by `rsconstruct tool lock`; move to newer releases with
+# `rsconstruct tool lock --upgrade`. Commit this file; do not edit it by hand.
+
+version = 1
+
+[rsconstruct]
+version = "0.9.140"
+
+[binary.biome]
+url = "https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.6.3/biome-linux-x64"
+sha256 = "1e5134625f00231035bfb14c12141cdc8fcab69b8275f354287808bb5d86d3ae"
+executable_sha256 = "1e5134625f00231035bfb14c12141cdc8fcab69b8275f354287808bb5d86d3ae"
+
+[binary.oxlint]
+url = "https://github.com/oxc-project/oxc/releases/download/oxlint_v1.86.0/oxlint-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "8ac22aebac95651eb64eff44d4abafeeee5bf606e6c943e3c6648de530c73255"
+executable_sha256 = "351e9f2555d8f37d86a35ea7268df146b102d069bdfbd45b9d9a9b61a81fa5a3"
+
+[binary.rumdl]
+url = "https://github.com/rvben/rumdl/releases/download/v0.2.66/rumdl-v0.2.66-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "2ca8703a66b17a73f6f85435d06f8d62484c1361d6b015f82bc46f9f642959a4"
+executable_sha256 = "12b47b3018e202259e2dba444f9fbcf168c6f8ffd2bc4d8f0e5ee410c79ec7af"
+
+[binary.taplo]
+url = "https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz"
+sha256 = "8fe196b894ccf9072f98d4e1013a180306e17d244830b03986ee5e8eabeb6156"
+executable_sha256 = "dad2faf6377d2daa4f4fabf459fe7ccfb98a5448f0d4bca8270ca9acb0409bfe"
