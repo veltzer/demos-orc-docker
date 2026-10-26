@@ -4,9 +4,6 @@
 
 version = 1
 
-[rsconstruct]
-version = "0.9.140"
-
 [binary.biome]
 url = "https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.6.3/biome-linux-x64"
 sha256 = "1e5134625f00231035bfb14c12141cdc8fcab69b8275f354287808bb5d86d3ae"
