@@ -4,7 +4,7 @@
 	// demos assume library globals (jQuery, dojo, Ext, ...) that vary per
 	// file. no-dupe-args and no-octal are absent because oxlint has no such
 	// rules: its parser rejects both constructs as syntax errors.
-	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
 	"plugins": ["eslint"],
 	"categories": {
 		"correctness": "off"
