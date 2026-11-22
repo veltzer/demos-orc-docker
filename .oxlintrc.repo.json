@@ -1,0 +1,16 @@
+{
+	// This repo's oxlint config: the fleet's shared rules (.oxlintrc.json,
+	// byte-identical everywhere, through extends), plus what extends does not
+	// carry over: the plugins, the environment this repo's JavaScript runs in,
+	// and the globals its pages get from the libraries their <script> tags
+	// load, so no-undef knows them and still catches every other undefined name.
+	"$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
+	"extends": ["./.oxlintrc.json"],
+	"plugins": ["eslint"],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es2022": true
+	},
+	"globals": {}
+}

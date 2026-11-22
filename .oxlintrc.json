@@ -1,9 +1,12 @@
 {
 	// Oxlint config: eslint:recommended spelled out, same rule set as the
-	// fleet's former .eslint.config.js. no-undef is off because the browser
-	// demos assume library globals (jQuery, dojo, Ext, ...) that vary per
-	// file. no-dupe-args and no-octal are absent because oxlint has no such
-	// rules: its parser rejects both constructs as syntax errors.
+	// fleet's former .eslint.config.js. Byte-identical in every repo; each
+	// repo lints through its own .oxlintrc.repo.json, which extends this file
+	// and names the globals that repo's pages get from the libraries their
+	// <script> tags load (jQuery, dojo, Ext, ...), so no-undef knows those and
+	// still catches every other undefined name. no-dupe-args and no-octal are
+	// absent because oxlint has no such rules: its parser rejects both
+	// constructs as syntax errors.
 	"$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
 	"plugins": ["eslint"],
 	"categories": {
@@ -58,7 +61,7 @@
 		"no-shadow-restricted-names": "error",
 		"no-sparse-arrays": "error",
 		"no-this-before-super": "error",
-		"no-undef": "off",
+		"no-undef": "error",
 		"no-unexpected-multiline": "error",
 		"no-unreachable": "error",
 		"no-unsafe-finally": "error",

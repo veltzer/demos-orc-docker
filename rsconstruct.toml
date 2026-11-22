@@ -115,4 +115,5 @@ src_extensions = [".css"]
 
 [processor.checker.oxlint]
 src_dirs = ["compose/exercises", "examples/hello_dotnet_build_and_run/test/Scripts", "exercises/nodejs"]
-args = ["-c", ".oxlintrc.json"]
+args = ["-c", ".oxlintrc.repo.json"]
+dep_inputs = [".oxlintrc.repo.json"]
