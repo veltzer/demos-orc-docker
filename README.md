@@ -5,7 +5,7 @@
 
 description: demos-orc-docker shows you how to do things with docker
 
-project website: https://veltzer.github.io/demos-orc-docker
+project website: <https://veltzer.github.io/demos-orc-docker>
 
 author: Mark Veltzer
 
