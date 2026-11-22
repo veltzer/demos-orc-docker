@@ -7,8 +7,10 @@ Demonstrate that this does not happen when you use:
     `$ docker kill [containerid]`
 
 References:
+
 * [stop-vs-kill](https://www.baeldung.com/ops/docker-stop-vs-kill)
 
 Conclusions:
+
 * `docker stop` sends `SIGTERM` with optional `SIGKILL` after a timeout.
 * `docker kill` sends `SIGKILL` or any other signal you choose.

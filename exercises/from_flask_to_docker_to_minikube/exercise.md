@@ -1,6 +1,7 @@
 # From Flask to Docker to Minikube
 
 ## Phase 1
+
 * create a flask application with the following UI:
   upload a file [_______________]V
   where the user can upload a file.
@@ -11,6 +12,7 @@
   When starting the list, of course, should be empty.
 
 ## Phase 2
+
 * Wrap your application as docker image (prepare Dockerfile, build etc...)
 * Run your application with a volume (--volume) and make your application write to that
   volume so that after you kill the app the files uploaded are still there.
@@ -18,6 +20,7 @@
   (in order to demonstrate that your solution is fine...)
 
 ## Phase 3
+
 * Install Minikube on your Linux machine.
   It must be a real Linux machine with enough RAM (at least 4 gig but maybe more).
   It must not be a WSL type windows system.

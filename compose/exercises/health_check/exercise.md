@@ -7,6 +7,7 @@ Make the first app start with a delay.
 Use the docker health check feature to know when the first app is up.
 
 There are two ways to use the health check:
+
 * the container can explain to docker how to health check itself.
 * we can explain to docker(/compose) how to health check the container in the `docker compose.yml` file.
 
@@ -24,4 +25,5 @@ docker compose logs
 ```
 
 ## References
+
 * [the HEALTHCHECK reference](https://docs.docker.com/reference/dockerfile/#healthcheck)

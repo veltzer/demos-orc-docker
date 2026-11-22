@@ -5,6 +5,7 @@
 * let the app run for several cycles and kill (CTRL+C)
 
 ## post mortem methods
+
 * show that your container is listed in the deceased list:
   `$ docker container ps -a`
   or
@@ -16,5 +17,6 @@
   command.
 
 ## Advanced
+
 * create a new image from your deceased container using the `docker commit`
   command and explore it with `docker run` and `bash`.

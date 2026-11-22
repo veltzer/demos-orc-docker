@@ -1,6 +1,7 @@
 # Install Docker
 
 Install docker in Ubuntu:
+
 * You need to have an Ubuntu virtual machine.
 * Install the following packages:
 
@@ -15,6 +16,7 @@ with:
 `$ ps -ef | grep dockerd`
 
 Adding yourself to the docker group:
+
 * Check if you are in the docker group using the command:
   `$ groups`
 * If you are in the docker group go to the next phase of the exercise
