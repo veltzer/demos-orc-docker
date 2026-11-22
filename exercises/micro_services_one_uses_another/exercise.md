@@ -21,6 +21,7 @@ When you access URL B with web tools like wget like this:
 You will get the result (12)
 
 ## Dependencies
+
 Both web services will be written in python with the "flask" framework.
 So make sure you install the "flask" package in both micro-services.
 
@@ -29,5 +30,6 @@ request from A to B. You will do this using the "requests" python library.
 Make sure you have it in your docker image A using "pip install requests"
 
 ## Advice
+
 Work slowly! First do only service B and test it on it's own.
 Only then add service A.
