@@ -1,3 +1,4 @@
+---
 services:
   app_b:
     image: app_b

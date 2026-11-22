@@ -1,3 +1,4 @@
+---
 services:
   # the mapping (":") syntax
   my_service:

@@ -1,3 +1,4 @@
+---
 services:
   some_service:
     build:
