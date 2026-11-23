@@ -91,11 +91,12 @@ src_dirs = ["exercises/java_build_maven_in_docker"]
 
 # ─── c / c++ ─────────────────────────────────────────────────────────────────
 
+# one standalone main.c per directory: one run per file is one program per run
 [processor.checker.cppcheck]
 src_dirs = ["examples", "exercises"]
 args = [
 	"--error-exitcode=1",
-	"--enable=warning,style,performance,portability",
+	"--enable=warning,style,performance,portability,information,unusedFunction",
 	"--check-level=exhaustive",
 	"--inline-suppr",
 ]

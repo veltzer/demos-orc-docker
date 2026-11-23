@@ -2,7 +2,6 @@
 Tests for the add module
 """
 
-# pylint: disable=import-error
 from module import add
 
 
