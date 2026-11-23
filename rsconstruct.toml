@@ -62,6 +62,10 @@ src_dirs = [".github/workflows"]
 # (policy: .github/zizmor.yml)
 [processor.checker.zizmor]
 src_dirs = [".github/workflows"]
+# The pedantic persona: also the findings zizmor's default persona keeps
+# quiet (undocumented permissions, template expansion of any context,
+# unnamed jobs, ...). --offline and --no-progress are the default args.
+args = ["--offline", "--no-progress", "--persona=pedantic"]
 
 # ─── yaml ────────────────────────────────────────────────────────────────────
 
@@ -92,6 +96,7 @@ src_dirs = ["examples", "exercises"]
 args = [
 	"--error-exitcode=1",
 	"--enable=warning,style,performance,portability",
+	"--check-level=exhaustive",
 	"--inline-suppr",
 ]
 

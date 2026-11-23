@@ -39,17 +39,15 @@ def root():
 def upload():
     """ upload the html here """
     file = request.files["file"]
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename or ""))
     return "<html><body>Your file was uploaded</body></html>"
 
 
 @app.route("/listdir")
 def listdir():
     """ list all files in the upload folder """
-    html = []
-    html.append("<html><body><ul>")
-    for filename in os.listdir(UPLOAD_FOLDER):
-        html.append(f"<li>{filename}</li>")
+    html = ["<html><body><ul>"]
+    html.extend(f"<li>{filename}</li>" for filename in os.listdir(UPLOAD_FOLDER))
     html.append("</ul></body></html>")
     return "\n".join(html)
 

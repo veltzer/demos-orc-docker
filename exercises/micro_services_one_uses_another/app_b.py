@@ -12,8 +12,8 @@ app = flask.Flask("app_b")
 @app.route("/add")
 def add():
     """ add url """
-    a_value = int(flask.request.args.get("a"))
-    b_value = int(flask.request.args.get("b"))
+    a_value = int(flask.request.args.get("a", ""))
+    b_value = int(flask.request.args.get("b", ""))
     return str(a_value+b_value)
 
 

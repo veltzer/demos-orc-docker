@@ -29,20 +29,15 @@ def main():
     print(f"increment is {increment}")
     print("=================================")
 
-    if not os.path.isfile(filename):
-        mode = "w+t"
-    else:
-        mode = "a+"
+    mode = "a+" if os.path.isfile(filename) else "w+t"
 
     i = 0
     with open(filename, mode, encoding="utf-8") as stream:
         while True:
             stream.seek(0)
-            line = None
-            for line in stream:
-                pass
-            if line is not None:
-                i = int(line)
+            lines = stream.readlines()
+            if lines:
+                i = int(lines[-1])
             print(f"incrementing by {increment} the value {i}")
             i += increment
             stream.write(f"{i}\n")

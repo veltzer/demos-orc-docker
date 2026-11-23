@@ -8,10 +8,7 @@ import os
 import sys
 import time
 
-if len(sys.argv) > 1:
-    name = sys.argv[1]
-else:
-    name = os.environ.get("name", "mark")
+name = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("NAME", "mark")
 
 i = 0
 while True:

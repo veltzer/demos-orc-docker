@@ -1,4 +1,6 @@
 #!/bin/bash -eu
+: "${WAYLAND_DISPLAY:?WAYLAND_DISPLAY must be set}"
+: "${XDG_RUNTIME_DIR:?XDG_RUNTIME_DIR must be set}"
 docker run -it --rm \
 	-e WAYLAND_DISPLAY="${WAYLAND_DISPLAY}" \
 	-e XDG_RUNTIME_DIR="/tmp" \

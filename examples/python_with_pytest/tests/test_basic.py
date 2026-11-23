@@ -3,7 +3,7 @@ Tests for the add module
 """
 
 # pylint: disable=import-error
-from module import add  # type: ignore
+from module import add
 
 
 def test_two_plus_two():

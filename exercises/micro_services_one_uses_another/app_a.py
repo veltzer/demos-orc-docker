@@ -23,11 +23,9 @@ FORM = """
 """
 
 
-if len(sys.argv) == 2:
-    ADDRESS = sys.argv[1]
-else:
-    # ADDRESS = "172.17.0.2"  # for debugging
-    ADDRESS = "app_b"  # for --network br1 or --link
+# ADDRESS = "172.17.0.2"  # for debugging
+# "app_b" is for --network br1 or --link
+ADDRESS = sys.argv[1] if len(sys.argv) == 2 else "app_b"
     # ADDRESS = "localhost"  # for --network=host
 
 app = flask.Flask("app_a")
@@ -42,8 +40,8 @@ def root():
 @app.route("/add")
 def add():
     """ this will add two numbers given to it """
-    a_value = int(flask.request.args.get("a"))
-    b_value = int(flask.request.args.get("b"))
+    a_value = int(flask.request.args.get("a", ""))
+    b_value = int(flask.request.args.get("b", ""))
     # This is the code that makes the request to the other micro-service
     params = {'a': a_value, 'b': b_value}
     # curl "http://localhost:8081/add?a=X&b=Y"

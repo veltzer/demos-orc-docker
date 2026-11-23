@@ -21,8 +21,10 @@ def root():
     )
     cursor = database.cursor()
     cursor.execute("SELECT * FROM bar")
-    for row in cursor:
-        html += f"<br>{row[0]}</br>"
+    for row in cursor.fetchall():
+        # the default cursor returns tuples
+        if isinstance(row, tuple):
+            html += f"<br>{row[0]}</br>"
     database.close()
     html += "</body></html>"
     return html

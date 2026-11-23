@@ -12,13 +12,28 @@
 	// stylelint rule counts a comment as content, biome's does not, and a
 	// stylesheet holding only a "(none yet)" comment is a legitimate exercise
 	// stub, not a mistake.
+	//
+	// Beyond the stylelint set: the correctness rules of biome's recommended
+	// CSS set (a generic family after every font list, var() around custom
+	// properties, known functions, ...). Two recommended rules are left out
+	// because their fix changes what a page looks like rather than repairing a
+	// mistake: noDescendingSpecificity (reordering rules reorders the cascade)
+	// and noImportantStyles (the !important declarations override styles the
+	// pages do not own, such as a framework's).
 	"javascript": { "linter": { "enabled": false } },
 	"json": { "linter": { "enabled": false } },
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"preset": "none",
+			"a11y": {
+				"useGenericFontNames": "error"
+			},
 			"correctness": {
+				"noInvalidDirectionInLinearGradient": "error",
+				"noMissingVarFunction": "error",
+				"noUnknownFunction": "error",
+				"noUnmatchableAnbSelector": "error",
 				"noInvalidGridAreas": "error",
 				"noInvalidPositionAtImportRule": "error",
 				"noUnknownMediaFeatureName": "error",
@@ -30,7 +45,9 @@
 			},
 			"suspicious": {
 				"noDuplicateAtImportRules": "error",
+				"noDuplicateCustomProperties": "error",
 				"noDuplicateFontNames": "error",
+				"noDuplicateSelectorsKeyframeBlock": "error",
 				"noDuplicateProperties": "error",
 				"noEmptyBlock": "error",
 				"noImportantInKeyframe": "error",
@@ -39,6 +56,9 @@
 				// stylelint's no-duplicate-selectors; biome has since
 				// promoted it out of nursery into suspicious
 				"noDuplicateSelectors": "error"
+			},
+			"style": {
+				"noValueAtRule": "error"
 			}
 		}
 	}

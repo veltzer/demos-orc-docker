@@ -1,6 +1,12 @@
 {
 	// Oxlint config: eslint:recommended spelled out, same rule set as the
-	// fleet's former .eslint.config.js. Byte-identical in every repo; each
+	// fleet's former .eslint.config.js, followed by the rules beyond it that
+	// catch bugs (== instead of ===, throwing a non-Error, parseInt without a
+	// radix, for-in without hasOwn, shadowing, var used outside its block,
+	// ...) and a few that remove dead code. Left out on purpose: rules that
+	// only judge style (no-var, prefer-template, curly, no-plusplus, ...) and
+	// no-console / no-alert, which the teaching pages use as their output.
+	// Byte-identical in every repo; each
 	// repo lints through its own .oxlintrc.repo.json, which extends this file
 	// and names the globals that repo's pages get from the libraries their
 	// <script> tags load (jQuery, dojo, Ext, ...), so no-undef knows those and
@@ -76,6 +82,53 @@
 		"no-with": "error",
 		"require-yield": "error",
 		"use-isnan": "error",
-		"valid-typeof": "error"
+		"valid-typeof": "error",
+		// beyond eslint:recommended
+		"array-callback-return": "error",
+		"block-scoped-var": "error",
+		"default-case": "error",
+		"default-case-last": "error",
+		"eqeqeq": "error",
+		"guard-for-in": "error",
+		"no-array-constructor": "error",
+		"no-caller": "error",
+		"no-else-return": "error",
+		"no-eval": "error",
+		"no-extend-native": "error",
+		"no-extra-bind": "error",
+		"no-implicit-coercion": "error",
+		"no-implied-eval": "error",
+		"no-iterator": "error",
+		"no-labels": "error",
+		"no-lone-blocks": "error",
+		"no-lonely-if": "error",
+		"no-loop-func": "error",
+		"no-multi-assign": "error",
+		"no-new": "error",
+		"no-new-func": "error",
+		"no-new-wrappers": "error",
+		"no-object-constructor": "error",
+		"no-promise-executor-return": "error",
+		"no-proto": "error",
+		"no-return-assign": "error",
+		"no-script-url": "error",
+		"no-self-compare": "error",
+		"no-sequences": "error",
+		"no-shadow": "error",
+		"no-throw-literal": "error",
+		"no-unneeded-ternary": "error",
+		"no-unused-expressions": "error",
+		"no-useless-call": "error",
+		"no-useless-computed-key": "error",
+		"no-useless-concat": "error",
+		"no-useless-constructor": "error",
+		"no-useless-rename": "error",
+		"no-useless-return": "error",
+		"no-void": "error",
+		"prefer-const": "error",
+		"prefer-object-has-own": "error",
+		"preserve-caught-error": "error",
+		"radix": "error",
+		"yoda": "error"
 	}
 }
