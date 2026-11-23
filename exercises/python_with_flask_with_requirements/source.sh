@@ -1,4 +1,3 @@
 # shellcheck shell=bash
 # --network=host -it
-# shellcheck disable=SC2034
-RUN_ARGS="-p 8080:8080 -it"
+export RUN_ARGS="-p 8080:8080 -it"

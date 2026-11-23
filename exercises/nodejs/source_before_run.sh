@@ -1,3 +1,2 @@
 # shellcheck shell=bash
-# shellcheck disable=SC2034
-RUN_ARGS="-p 8000:8000"
+export RUN_ARGS="-p 8000:8000"

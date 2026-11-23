@@ -1,6 +1,5 @@
 # shellcheck shell=bash
-# shellcheck disable=SC2034
-RUN_ARGS="--interactive"
+export RUN_ARGS="--interactive"
 # this will fail:
 # RUN_ARGS=""
 # these will also fail:

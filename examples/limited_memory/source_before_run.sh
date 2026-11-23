@@ -1,3 +1,2 @@
 # shellcheck shell=bash
-# shellcheck disable=SC2034
-RUN_ARGS="-it --memory=40m"
+export RUN_ARGS="-it --memory=40m"

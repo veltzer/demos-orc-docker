@@ -1,4 +1,3 @@
 # shellcheck shell=bash
-# shellcheck disable=SC2034
 GID=$(id -g)
-RUN_ARGS="-it --user ${UID}:${GID} --volume ${PWD}/data:/data"
+export RUN_ARGS="-it --user ${UID}:${GID} --volume ${PWD}/data:/data"

@@ -19,5 +19,6 @@ then
 	echo "Container [${image_name}] is dead. Removing..."
 	docker rm "${image_name}"
 fi
-# shellcheck disable=SC2086
-docker run ${RUN_ARGS} --name "${image_name}" "${image_name}"
+# RUN_ARGS is a space separated option string, split it into words on purpose
+read -r -a run_args <<< "${RUN_ARGS}"
+docker run "${run_args[@]}" --name "${image_name}" "${image_name}"
