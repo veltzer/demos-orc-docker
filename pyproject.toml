@@ -39,3 +39,6 @@ ignore-missing-imports = [
     "mysql.*",
     "pyvardump.*",
 ]
+
+[tool.pyrefly.errors]
+no-any-return = "error"
