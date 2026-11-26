@@ -86,6 +86,7 @@ src_dirs = ["compose/exercises/nodejs_postgresql/app", "exercises/nodejs"]
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
 [processor.checker.ixmllint]
+src_files = ["checkstyle.xml"]
 # warnings fail too, not only fatal errors
 strict = true
 src_dirs = ["exercises/java_build_maven_in_docker"]
