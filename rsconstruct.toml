@@ -70,7 +70,8 @@ args = ["--offline", "--no-progress", "--persona=pedantic"]
 # ─── yaml ────────────────────────────────────────────────────────────────────
 
 [processor.checker.iyamllint]
-src_dirs = ["compose", "exercises"]
+src_files = [".hadolint.yaml", ".yamllint.yaml"]
+src_dirs = [".github", "compose", "exercises"]
 
 # ─── docker ──────────────────────────────────────────────────────────────────
 
