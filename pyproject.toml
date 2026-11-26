@@ -34,11 +34,6 @@ search-path = [
     # the pytest example imports its sibling "module" package
     "examples/python_with_pytest",
 ]
-# Third-party libraries without type information.
-ignore-missing-imports = [
-    "mysql.*",
-    "pyvardump.*",
-]
 
 [tool.pyrefly.errors]
 no-any-return = "error"

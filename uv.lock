@@ -379,11 +379,11 @@ wheels = [
 
 [[package]]
 name = "pyvardump"
-version = "0.0.5"
+version = "0.0.6"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/2a/58/06ce7a00bb21558ee825163b59adfcac421375ed11bc59034eb9672a93a2/pyvardump-0.0.5.tar.gz", hash = "sha256:9a41797463b5359a211eae54d910886ce429ce455a109df15063db5059dccb82", size = 3213, upload-time = "2024-10-12T12:00:26.048Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/18/95/187647ee792bfc03ddcba22f7dcc9336725a8bebb1a240c2d1cb989b5f18/pyvardump-0.0.6.tar.gz", hash = "sha256:60d472872534ad2a0e5a3010b19a62c442f38b5ccdcef147317601216988b23b", size = 5635, upload-time = "2026-11-26T17:04:13.23Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cc/09/f37ee94faf576c8463b2953f7565c3e125bf398567b41cfb4ea83efbcc34/pyvardump-0.0.5-py3-none-any.whl", hash = "sha256:5b51cc0073e35511390521686230370273310a7331fad37fe5a67ca20f882f25", size = 3599, upload-time = "2024-10-12T12:00:24.418Z" },
+    { url = "https://files.pythonhosted.org/packages/73/b5/5dbecbf6127392390402dce2ae762fb6d5a27dc06e41904805cf93d52834/pyvardump-0.0.6-py3-none-any.whl", hash = "sha256:781d7a5367407698d582e2c58e86cf255fcd367c63fc8efa6ffb26712e1b6ea6", size = 4088, upload-time = "2026-11-26T17:04:11.849Z" },
 ]
 
 [[package]]
