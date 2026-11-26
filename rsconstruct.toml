@@ -51,6 +51,10 @@ src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
+# run the tests of the examples with pytest (policy: [tool.pytest.ini_options])
+[processor.checker.pytest]
+src_dirs = ["examples/python_with_pytest/tests"]
+
 [processor.checker.taplo]
 src_files = [".ruff.toml", ".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
 

@@ -23,6 +23,17 @@ dev = [
 # Demo/teaching repo: not an installable package.
 package = false
 
+[tool.pytest.ini_options]
+# Every strictness check pytest has (strict_config, strict_markers,
+# strict_xfail, strict_parametrization_ids), and every warning fails the
+# test that raised it rather than scrolling past in the summary.
+strict = true
+filterwarnings = ["error"]
+# each example is a project of its own: its directory is its import root
+pythonpath = [
+    "examples/python_with_pytest",
+]
+
 [tool.pyrefly]
 # Type checking (rsconstruct's pyrefly processor), with pyrefly's default
 # error set. "." on the search path is mypy's implicit current directory.
