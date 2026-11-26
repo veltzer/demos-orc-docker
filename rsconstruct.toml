@@ -131,3 +131,8 @@ src_extensions = [".css"]
 src_dirs = ["compose/exercises", "examples/hello_dotnet_build_and_run/test/Scripts", "exercises/nodejs"]
 args = ["-c", ".oxlintrc.repo.json"]
 dep_inputs = [".oxlintrc.repo.json"]
+
+# every lint suppression names a rule and says why (see the fleet's CLAUDE.md)
+[processor.checker.suppressions]
+src_dirs = [".github", "compose", "config", "examples", "exercises", "fun", "notes", "scripts"]
+src_files = [".auto.enter.sh", ".auto.exit.sh", ".hadolint.yaml", ".yamllint.yaml", "README.md"]
