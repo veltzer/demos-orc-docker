@@ -19,4 +19,4 @@ services:
     depends_on:
       - app
 volumes:
-  uptime-kuma-volume:
+  uptime-kuma-volume: {}
