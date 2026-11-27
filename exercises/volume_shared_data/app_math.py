@@ -7,8 +7,8 @@ logging app that can receive sleep time and interval
 import os.path
 import time
 
-# import random
-# import sys
+# import random  # noqa: ERA001  teaching: kept in the comment for the reader
+# import sys  # noqa: ERA001  teaching: kept in the comment for the reader
 
 
 def main():
@@ -16,11 +16,11 @@ def main():
     filename = "data/data.txt"
 
     # no parameters
-    # sleep_time=random.randint(2,7)
-    # increment=random.randint(2,7)
+    # sleep_time=random.randint(2,7)  # noqa: ERA001  teaching: kept in the comment for the reader
+    # increment=random.randint(2,7)  # noqa: ERA001  teaching: kept in the comment for the reader
     # command line
-    # sleep_time = int(sys.argv[1])
-    # increment = int(sys.argv[2])
+    # sleep_time = int(sys.argv[1])  # noqa: ERA001  teaching: kept in the comment for the reader
+    # increment = int(sys.argv[2])  # noqa: ERA001  teaching: kept in the comment for the reader
     # environment
     sleep_time = int(os.environ["SLEEP_TIME"])
     increment = int(os.environ["INCREMENT"])

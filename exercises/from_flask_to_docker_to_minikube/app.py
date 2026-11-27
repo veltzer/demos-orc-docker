@@ -9,7 +9,7 @@ import os.path
 import flask
 from flask import request
 
-# UPLOAD_FOLDER = "/home/mark/upload_data"
+# UPLOAD_FOLDER = "/home/mark/upload_data"  # noqa: ERA001  teaching: kept in the comment for the reader
 UPLOAD_FOLDER = "/data"
 
 UPLOAD_HTML = """

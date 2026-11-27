@@ -23,10 +23,10 @@ FORM = """
 """
 
 
-# ADDRESS = "172.17.0.2"  # for debugging
+# ADDRESS = "172.17.0.2"  # for debugging  # noqa: ERA001  teaching: kept in the comment for the reader
 # "app_b" is for --network br1 or --link
 ADDRESS = sys.argv[1] if len(sys.argv) == 2 else "app_b"
-    # ADDRESS = "localhost"  # for --network=host
+    # ADDRESS = "localhost"  # for --network=host  # noqa: ERA001  teaching: kept in the comment for the reader
 
 app = flask.Flask("app_a")
 

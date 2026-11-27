@@ -27,7 +27,7 @@ def main():
         if "=>" not in line:
             continue
         lib = line.split("=>")[1].strip().split(" ")[0]
-        # print(lib)
+        # print(lib)  # noqa: ERA001  teaching: kept in the comment for the reader
         os.makedirs(lib)
         subprocess.check_call([
             "docker",
